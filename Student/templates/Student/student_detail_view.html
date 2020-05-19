@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+hi
+<ul>
+    {%if gpa > 1  %}
+        {{obj.student_id}}
+    {% else %}
+        {{obj.name}}
+    {% endif %}
+    <div>
+    {{obj.age}}
+    </div>
+</ul>
+<ul>
+    {% for key,value in obj.items%}
+    <li>{{ value }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

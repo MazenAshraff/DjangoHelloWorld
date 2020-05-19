@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{%block content%}
+<h1> Hi I am mazen </h1>
+<div>
+<button>Bob do something </button> </div>
+{{request.user}}
+<p>I am living the best life</p>
+
+<ul>
+    <li>
+        One
+    </li>
+    <li>
+        Two
+
+    </li>
+    <li>
+        Three
+    </li>
+</ul>
+<ol>
+    {% for item in List %}
+    <li>{{ item |add:13|safe|slugify}}</li>
+    {% endfor %}
+
+</ol>
+
+
+{%endblock%}
